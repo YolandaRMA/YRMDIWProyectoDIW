@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.1 1-2-2Yolanda</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        --ms: 10px;
+      }
+      body {
+        margin: 5px;
+      }
+      img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+      }
+      .container {
+
+        min-width: 570px;
+        font-size: 16px;
+        white-space: nowrap;
+      }
+      header {
+        background-color: #999999;
+      }
+      header div {
+        display: inline-block;
+        width: calc(100% / 3 - 4px);
+        height: 120px;
+        text-align: center;
+        vertical-align: top;
+        line-height: 120px;
+        & h1 {
+          line-height: 120px;
+          margin: 0;
+        }
+        & img {
+          margin-top: var(--ms);
+        }
+      }
+      header img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      nav,
+      main,
+      aside {
+        display: inline-block;
+        height: 60vh;
+        vertical-align: top;
+        white-space: normal;
+      }
+      nav,
+      aside {
+        width: 20%;
+        background: red;
+      }
+      main {
+        width: 60%;
+        & article{
+            width: 60vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div><img src="https:/picsum.photos/id/100/100/100" alt="" /></div>
+        <div><h1>CABECERA</h1></div>
+        <div><img src="https:/picsum.photos/id/26/100/100" alt="" /></div>
+      </header>
+
+      <nav>
+        <!-- ul>li*4>a[href=#]{Inicio} + tabulador(si contrl+tab te enseña lo qyue devuelve)-->
+        <ul>
+          <li><a href="#">Opcion 1</a></li>
+          <li><a href="#">Opcion 2</a></li>
+          <li><a href="#">Opcion 3</a></li>
+          <li><a href="#">Opcion 4</a></li>
+        </ul>
+      </nav>
+      <main>
+        <!-- article>(h2{Mi $ articulo})(p>lorem) -->
+        <article>
+          <h2>Mi 1 articulo</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nihil
+            unde voluptate asperiores rem natus in, doloremque dolores
+            obcaecati, explicabo esse a quaerat laudantium, accusamus rerum fuga
+            earum minus non?
+          </p>
+        </article>
+
+        <article>
+          <h2>Mi 2 articulo</h2>
+          <h3>Subtitulo 2 articulo</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nihil
+            unde voluptate asperiores rem natus in, doloremque dolores
+            obcaecati, explicabo esse a quaerat laudantium, accusamus rerum fuga
+            earum minus non?
+          </p>
+        </article>
+
+        <article>
+          <h2>Mi 3 articulo</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nihil
+            unde voluptate asperiores rem natus in, doloremque dolores
+            obcaecati, explicabo esse a quaerat laudantium, accusamus rerum fuga
+            earum minus non?
+          </p>
+          <span>comentarios</span>
+        </article>
+      </main>
+      <aside>
+        <p>aquí tenemos nuestra seccion de links interesantes</p>
+        <details open>
+          <summary>Lista de datos sumary</summary>
+          <ol type="A">
+            <!-- li*3{opcion $} -->
+            <li>opcion 1</li>
+            <li>opcion 2</li>
+            <li>opcion 3</li>
+          </ol>
+        </details>
+      </aside>
+      <footer>
+        <p>&copy;Todos los derechos reservados.</p>
+        <label for="file">Progress:</label>
+        <progress id="file" max="100" value="67">67%</progress>
+      </footer>
+    </div>
+  </body>
+</html>
