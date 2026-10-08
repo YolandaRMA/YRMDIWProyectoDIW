@@ -52,7 +52,7 @@
       main,
       aside {
         display: inline-block;
-        height: 60vh;
+        height: 73vh;
         vertical-align: top;
         white-space: normal;
         & ul{
@@ -64,7 +64,7 @@
       nav,
       aside {
         width: 20%;
-        background: red;
+        background: #ff0033;
         padding: 6px;
       }
       main {
@@ -72,6 +72,27 @@
         & article{
             width: 60vh;
         }
+        & article :not(p){
+          text-align: center;
+        }
+        & span{
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      /* aside :nth-last-of-type(1){
+         background-color: #ccc;
+      } */
+       aside :is(p,details){
+         background-color: #ccc;
+         margin: 5px;  
+       }
+       aside p{margin-bottom: 0px;}
+       aside details{margin-top: 0px;}
+      footer{
+        text-align: center;
+        background-color: #555555;
+        padding: 1px;
       }
     </style>
   </head>
