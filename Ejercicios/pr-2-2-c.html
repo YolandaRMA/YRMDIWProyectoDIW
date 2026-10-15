@@ -9,12 +9,61 @@
         box-sizing: border-box;
         font-family: sans-serif;
       }
-      h2 {
-        text-align: center;
+      body {
+        width: 95%;
+        margin: 5px;
       }
       .container {
-             
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px;
       }
+      a {
+        display: inline-block;
+        width: 128px;
+        height: 40px;
+        text-decoration: none;
+        text-align: center;
+         line-height: 40px;
+        font-family: Impact, sans-serif;
+      }
+      nav a {
+        &:first-child {
+          background-color: #ff1493;
+        }
+        &:last-child {
+          background-color: #ff6347;
+        }
+        &:nth-child(2) {
+          background-color: #bc8f8f;
+        }
+      }
+      article {
+        padding: 5px;
+        margin-bottom: 20px;
+        height: 60vh;
+        & h2 {
+          text-align: left;
+        }
+        & a {
+          display: inline-block;
+          background-color: #008000;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;       
+        }
+        &:nth-of-type(1){
+          background-color: #bbb;
+          color: white;
+        }
+        &:nth-of-type(2){
+          background-color: #ff8c00;
+        }
+        &:nth-of-type(3){
+          background-color: cyan;
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -22,25 +71,39 @@
       <h2 id="ini"></h2>
       <nav>
         <a href="#A1">Primero</a>
-      <a href="#A2">Segundo</a>
-      <a href="#A3">Tercero</a>
-      <!-- artiticle*3>h2{Articulo $}+(p>lorem)+a[href=#ini]{Volver} -->
-      <artiticle>
+        <a href="#A2">Segundo</a>
+        <a href="#A3">Tercero</a>
+      </nav>
+      <!-- article*3>h2{Articulo $}+(p>lorem)+a[href=#ini]{Volver} -->
+      <article id="#A1">
         <h2>Articulo 1</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto sed soluta eum et, amet quisquam saepe iure tempora doloribus autem, voluptate quo ad reiciendis libero sunt quos quaerat! Est, mollitia?</p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto
+          sed soluta eum et, amet quisquam saepe iure tempora doloribus autem,
+          voluptate quo ad reiciendis libero sunt quos quaerat! Est, mollitia?
+        </p>
         <a href="#ini">Volver</a>
-      </artiticle>
-      <artiticle>
+      </article>
+      <article id="#A2">
         <h2>Articulo 2</h2>
-        <p>Odit corporis eveniet laboriosam earum vitae optio, blanditiis ut culpa itaque dolore quasi saepe, error tempore, consequuntur natus explicabo. Autem molestias fugit quos. Culpa cum ea tempora doloribus inventore aut!</p>
+        <p>
+          Odit corporis eveniet laboriosam earum vitae optio, blanditiis ut
+          culpa itaque dolore quasi saepe, error tempore, consequuntur natus
+          explicabo. Autem molestias fugit quos. Culpa cum ea tempora doloribus
+          inventore aut!
+        </p>
         <a href="#ini">Volver</a>
-      </artiticle>
-      <artiticle>
+      </article>
+      <article id="#A3">
         <h2>Articulo 3</h2>
-        <p>Unde aspernatur, perspiciatis architecto quas harum voluptates praesentium ex quia facilis, possimus beatae hic optio obcaecati voluptate ab vel laudantium inventore ea iure eligendi. Nihil optio reiciendis harum fugit officiis?</p>
+        <p>
+          Unde aspernatur, perspiciatis architecto quas harum voluptates
+          praesentium ex quia facilis, possimus beatae hic optio obcaecati
+          voluptate ab vel laudantium inventore ea iure eligendi. Nihil optio
+          reiciendis harum fugit officiis?
+        </p>
         <a href="#ini">Volver</a>
-      </artiticle>
-    </nav>
+      </article>
     </div>
   </body>
 </html>
