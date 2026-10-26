@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* posiciono al "padre" para hihjos absolute */
+      body {
+        font-size: 2rem;
+       margin: 25px;
+      }
+  
+      .container{
+        width: 600px;
+        height: 400px;
+        background-color: gray;
+        position: absolute; 
+        left: 50%;
+        top: 50%;
+        /* transform: translate(-50%,-50%);para centrar bloque al punto central */
+       
+      }
+      nav{
+        position: fixed;
+        background-color: #ddd;
+        height: 100px;
+        width: 100%; /*si no fijo tamaño,coge lo que ocupa*/
+        top: 0;
+        left: 0;
+      }
+       
+      .box1, .box2 {
+        width: 500px;
+        height:100px;
+      }
+      .box3, .box4 {
+        width: 100px;
+        height:300px;
+       
+      }
+
+      .box1 {
+        background-color: yellow;
+        position: absolute;
+        left: 50px;
+        bottom: 80px;
+       
+      }
+      .box2 {
+        background-color: red;
+       position: absolute;
+        top: 80px;
+         left: 50px;
+      }
+      .box3 {
+        background-color: blue;
+        position: absolute;
+        top: 50px;
+         left: 100px;
+      }
+      .box4 {
+        background-color: rgb(30, 237, 30);
+        position: absolute;
+        top: 50px;
+       right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>Barra de navegacion</nav>
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+            <div class="box4">4</div>       
+      </div>
+  </body>
+</html>

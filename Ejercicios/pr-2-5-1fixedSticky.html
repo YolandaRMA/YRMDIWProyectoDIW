@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    /* posiciono al "padre"(relative) para hihjos absolute */
+      body {
+        font-size: 2rem;
+       margin: 25px;
+      }
+  
+      .container{
+        width: 600px;
+        height: 4000px;
+        background-color: gray;
+        position: relative; 
+        /* left: 50%;
+        top: 50%; */
+        
+       
+      }
+       nav{
+        position: fixed;
+        background-color: #ddd;
+        height: 100px;
+        width: 100%; /*si no fijo tamaño,coge lo que ocupa*/
+        top: 0;
+        left: 0;
+      }
+      p{
+        background-color: royalblue;
+      }
+      article{
+        background-color: plum;
+        position: sticky;
+        top: 50px;
+      }
+      footer{
+        width: 100%;
+        height: 2000px;
+        background-color: purple;
+      }
+      .box1, .box2 {
+        width: 500px;
+        height:100px;
+      }
+      .box3, .box4 {
+        width: 100px;
+        height:300px;
+       
+      }
+
+      .box1 {
+        background-color: yellow;
+        position: absolute;
+        left: 50px;
+        top: 225px;
+       
+      }
+      .box2 {
+        background-color: red;
+       position: absolute;
+        top: 80px;
+         left: 50px;
+      }
+      .box3 {
+        background-color: blue;
+        position: absolute;
+        top: 50px;
+         left: 100px;
+      }
+      .box4 {
+        background-color: rgb(30, 237, 30);
+        position: absolute;
+        top: 50px;
+       right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>Barra de navegacion</nav>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis sint debitis repellendus nesciunt quidem, magni, expedita iure magnam at, 
+        ad sunt amet ut sapiente dolores delectus doloribus labore reiciendis repudiandae!</p>
+      <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Quas, velit. Officia at modi deleniti nostrum, s animi deleniti 
+        porro officia amet vitae?</article>
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+            <div class="box4">4</div>       
+      </div>
+      <footer>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quo,
+         ipsa dignissimos officiis nisi nulla animi libero asperiores fuga laboriosam illo, commodi eos atque vitae consequatur ipsum soluta nostrum iure?</footer>
+  </body>
+</html>
