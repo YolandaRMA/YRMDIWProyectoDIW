@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2-7-2</title>
+        <style>
+        * {
+       box-sizing: border-box;   
+       margin: 0;
+       font-family: sans-serif;
+      }
+      body{
+        margin: 5px;
+      }
+      a{
+        color: #5882b7;
+        font-family: 'Segoe UI', sans-serif;
+        background: #dddddd;
+        width: 600px;
+        height: 40px;
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        font-weight: bold;
+        border-bottom: 1px solid #aaa;
+      }
+      p{
+        display: none;
+        background: #eeeeee;
+        margin: 0;
+        width: 600px;
+      }
+      p:target{
+        display: block;
+      }
+     
+    </style>
+</head>
+<body>
+   <main>
+        <!-- (a[href=#p$]{Titulo $}+p[id=p$]>lorem)*4 -->
+         <a href="#p1">Titulo 1</a>
+         <p id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, veniam ipsa! Eligendi impedit porro ab in ullam tempore eius praesentium quis, atque neque minima quia vero voluptatibus doloribus nesciunt soluta.</p>
+         <a href="#p2">Titulo 2</a>
+         <p id="p2">Magnam, maiores possimus asperiores est natus repellendus repellat a fugiat voluptatum aperiam soluta similique, dicta vitae, quas obcaecati deleniti facilis! Molestias culpa adipisci rem, esse excepturi eligendi quidem magnam amet!</p>
+         <a href="#p3">Titulo 3</a>
+         <p id="p3">Iusto quo in animi consequuntur unde laboriosam repellendus officia qui, maiores ullam error culpa dolore recusandae deserunt placeat aliquid inventore impedit veniam asperiores itaque fuga, fugit voluptas excepturi? At, blanditiis!</p>
+         <a href="#p4">Titulo 4</a>
+         <p id="p4">Corrupti, nemo officia architecto, beatae eius consequuntur vitae fugit accusamus aliquam cum quas laborum neque distinctio rem id, voluptas quaerat doloremque temporibus impedit mollitia! Nam cumque autem ullam dicta sed!</p>
+   </main> 
+</body>
+</html>
