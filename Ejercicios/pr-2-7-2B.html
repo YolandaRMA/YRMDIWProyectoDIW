@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 2-7-2</title>
         <style>
-        * {
+      * {
        box-sizing: border-box;   
        margin: 0;
        font-family: sans-serif;
@@ -19,6 +19,8 @@
       height: 600px;
       background:#eee ;
       position: relative;
+      overflow: hidden;
+
      }
      input{display: none;}
 #mm{
@@ -36,10 +38,16 @@ article{
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 40px;
+  background: #226546cd;
+  left: -100%;
+  transition: all 0.5s ease-in-out ;
   & label{
     position: absolute;
     display: inline-block;
     width: 48px;
+    right: 10px;
+    top: 10px;
     height: 48px;
     background: orangered;
     text-align: center;
@@ -59,7 +67,10 @@ article{
     transform: translate(-50%, -50%);
   }
 }
-
+#rdOpen:checked ~article{
+  left: 0;
+  
+}
     </style>
 </head>
 <body>
