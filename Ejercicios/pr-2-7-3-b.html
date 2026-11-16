@@ -7,45 +7,82 @@
     <style>
       * {
         box-sizing: border-box;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: sans-serif;
         font-weight: 600;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
+
       body {
-       margin: 0px; 
+        margin: 0;
       }
+
+      img {
+        width: 100vw;
+      }
+
       .container {
-        width: 95%;
+        width: 100vw;
         height: 100vh;
-        background-color: #34495e;
+        background: #34495e;
         overflow: hidden;
+        background-image: url(./images/fondoAmazon.png);
       }
+
       header {
         position: relative;
         width: 100%;
         height: 72px;
-        background-color: #232f3e;
+        background: #232f3e;
+
         input {
           display: none;
+
           &:checked ~ nav {
             left: 0;
           }
+
           &:checked ~ .lblClose {
-            right: 0;
+            /* right: 0; */
+            /* left:320px; */
+            opacity: 1;
           }
         }
 
+        .header1 {
+          position: relative;
+          top: 0;
+          width: 100vw;
+          & img {
+            display: block;
+            width: 100vw;
+            height: 74px;
+          }
+        }
+
+        .header2 {
+          width: 100vw;
+          height: 52px;
+          position: absolute;
+          top: 52px;
+          background-color: #232f3e;
+        }
+
         & .lblHbger {
-                position: relative;
-                top: 10px;left: 5px;
-                display: block;
-                width: 104px;
-                height: 48px;
-                background:#232f3e;
-                
-                padding-top: 10px;
-                border-radius: 3px;
-                &:hover{border: 2px solid white;}
-                cursor: pointer;
+          position: absolute;
+          top: 52px;
+          left: 0px;
+          display: block;
+          width: 104px;
+          height: 48px;
+          background: #232f3e;
+          color: white;
+          padding-top: 10px;
+          border-radius: 3px;
+          z-index: 2;
+          &:hover {
+            border: 2px solid white;
+          }
+          cursor: pointer;
 
           & span {
             display: block;
@@ -62,24 +99,23 @@
             position: relative;
             left: 55px;
           }
-        }
+        } /*hbger  */
 
         nav {
           position: absolute;
+          top: 0;
           width: 320px;
           height: 100vh;
-          background: white;
-          top: 0;
-          left: -100%;
+          background: #ffffff;
           overflow-y: auto;
-          transition: left 0.5s cubic-bezier(1, 0, 0, 1) ;
+          left: -100%;
           z-index: 10;
-
+          transition: left 0.2s cubic-bezier(1, 0, 0, 1);
           a {
             display: block;
             width: 100%;
             height: 40px;
-            color: #8a8a8a;           
+            color: #8a8a8a;
             text-decoration: none;
             padding-left: 10px;
             line-height: 40px;
@@ -90,32 +126,69 @@
               background: #232f3e;
               color: white;
             }
+            &::after{
+              content: "\003E"; /* o content :">"; */
+              position: absolute;
+              right: 12px;
+              
+            }
+            &:hover::after {
+            transform: scale(1.5);
+            }
           }
-          span{
-            font-weight: bold;
-            font-size: 1.2rem;
+          span {
             display: block;
             width: 100%;
-            border-top: 1px solid #8a8a8a;
-            padding-left: 10px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-top: 1px solid #bbb;
           }
-        }
-        .lblClose{
-          position: absolute;
+        } /* nav */
+
+        .lblClose {
           display: block;
-          width: calc(100vw -320px);
-          height: 100vh ;
+          position: absolute;
           top: 0;
-          left: 320px;
-          background: rgba(0, 0, 0, 0.653);    
-          transition: all;      
-        }
-        #closeNav:checked ~ nav{
-          left: -100%;
-        }
-        #closeNav:checked ~ .lblClose{
-            left: -100%;
+          left: 0px;
+          background: #00000079;
+          width: 100vw;
+          height: 100vh;
+          opacity: 0;
+          z-index: 1;
+          transition: all 0.3s ease;
+          /* existe opcion after y before y son elementos de tipo in-line ,posicinar*/
+          &::after {
+            content: "X"; /*necesita content obligatorio,sino no aparece */
+            position: absolute;
+            left: 325px;
+            top: 5px;
+            color: white;
+            width: 32px;
+            height: 32px;
+            font-size: 1.6rem;
+            font-weight: 100;
+            background: transparent;
+            border: 0.5px solid white;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 5px;
+            cursor: pointer;
+            pointer-events: auto; /* El ::after sí recibe los clics */
+  
+            
           }
+        }
+
+        #closeNav:checked ~ nav {
+          left: -320px;
+        }
+
+        #closeNav:checked ~ .lblClose {
+          /* right:-100%; */
+          /* left:-100%; */
+          opacity: 0;
+        }
       }
     </style>
   </head>
@@ -123,8 +196,11 @@
     <div class="container">
       <header>
         <div class="header1">
-          <img src="./images/barraAmazon.png" alt="">
+          <img src="./images/barraAmazon.png" alt="" />
         </div>
+
+        <div class="header2"></div>
+
         <input type="radio" name="rd" id="openNav" />
         <input type="radio" name="rd" id="closeNav" />
         <label for="openNav" class="lblHbger">
@@ -150,7 +226,7 @@
           <a href="#">Profesorado Secretaría</a>
           <a href="#">Los más vendidos</a>
           <a href="#">Vender en Amazon</a>
-           <span>Ayuda y ajustes</span>
+          <span>Ayuda y ajustes</span>
           <a href="#">Secretaría</a>
           <a href="#">Libros</a>
           <a href="#">Profesorado Secretaría</a>
