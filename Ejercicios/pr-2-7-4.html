@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pr-2-7-4</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+}
+header {
+  width: 100%;
+  height: 22px;
+  background: #3769a6;
+  color: white;
+}
+
+header h1 {
+  font-size: 14px;
+  padding-left: 8px;
+}
+h2 {
+  font-size: 24px;
+  margin: 8px;
+}
+.container {
+ display: block;
+  width: 100%;
+  height: 350px;
+  padding-top: 125px;
+  padding-left: 13px;
+}
+
+.bola {
+  position: relative; /*padre necesita position: relative.*/
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: blue;
+  isolation: isolate; /*isolation: isolate permite controlar correctamente las capas con z-index.*/
+}
+
+/*Los pseudoelementos utilizan position: absolute para colocarse respecto a la esfera.*/
+/* color degradado  */
+.bola::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+
+  background: radial-gradient( /*Cubre toda la esfera y genera la transición de amarillo a azul mediante radial-gradient().*/
+    circle at 25% 20%,
+    yellow,
+    #baba4b 30%,
+    #6666a0 58%,
+    blue
+  );
+
+  z-index: 1;
+}
+
+/* sombre bajo esfera */
+.bola::after {
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 18px;
+  left: 65px;
+  bottom: -12px;
+  border-radius: 50%;
+  background: blue;
+  filter: blur(5px); /*Crea una elipse azul debajo de la esfera. filter: blur(5px) difumina sus bordes.*/
+  z-index: -1;
+}
+
+</style>
+</head>
+
+<body>
+<header>
+    <h1>PR-2-7-4: Ejemplos con efectos before y after</h1>
+</header>
+
+<h2>Ejemplo 1:</h2>
+<div class="container">
+  <div class="bola"></div>
+</div>
+
+</body>
+</html>
