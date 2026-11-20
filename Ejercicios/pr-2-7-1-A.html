@@ -6,47 +6,64 @@
     <title>Pestañas</title>
     <style>
         * {
-       box-sizing: border-box;
-       font-family: sans-serif;
-      
-      }
-      body{
-        margin: 5px;
-      }
-      .container{
-        position: relative;
-       
-      }
-      a{
-        display: inline-block;
-        text-align: center;
-        line-height: 40px;
-        width: 96px;
-        height: 40px;
-        text-decoration: none;
-        border-radius: 6px 6px 0px 0px;
-        letter-spacing: 2px;
-        font-family: Impact, sans-serif;
-        margin: 0px 24px;
-        &:nth-of-type(1){background-color: #67e767;}
-        &:nth-of-type(2){background-color: #5178e4;}
-        &:nth-of-type(3){background-color: #ebb7d9;}
-      }
-      article{
-        position: absolute;
-        width: 550px;
-        height: 300px;
-        padding: 10px;
-        font-weight: bold;
-        
-        
-        &:nth-of-type(1){background-color: #67e767;z-index: 1;}
-        
-        &:nth-of-type(2){background-color: #5178e4;z-index: 1;}
-        &:nth-of-type(3){background-color: #ebb7d9;z-index: 1;}
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
 
-        article:target{z-index: 100;       }
-      }
+        body {
+            margin: 5px;
+        }
+
+        a {
+            display: inline-block;
+            width: 112px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background: red;
+            border-radius: 6px 6px 0 0;
+            text-decoration: none;
+            font-family: impact, sans-serif;
+            letter-spacing: 1px;
+            margin: 0px 24px;
+            color: #000;
+
+            &:nth-of-type(1) {
+                background: #67e767;
+            }
+
+            &:nth-of-type(2) {
+                background: #5178e4;
+            }
+
+            &:nth-of-type(3) {
+                background: #ebb7d9;
+            }
+        }
+
+        article {
+            position: absolute;
+            width: 550px;
+            height: 300px;
+            padding: 10px;
+            font-weight: bold;
+            &:nth-of-type(1) {
+                background: #67e767;
+                z-index: 1;
+            }
+
+            &:nth-of-type(2) {
+                background: #5178e4;
+            }
+
+            &:nth-of-type(3) {
+                background: #ebb7d9;
+            }
+        }
+
+        article:target {
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
