@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex01 yolanda</title>
+    <style>
+      .container {
+        background-color: violet;
+        width: 600px;
+        height: 600px;
+        display:block;
+        position: relative;
+
+      }
+      .boton{
+        width: 164px; 
+        height: 64px;
+        background-color: rgb(27, 80, 50);
+        color: white;
+        text-align: center;
+        line-height: 60px; /* centrado texto */ 
+        position: absolute;
+        left: 35%;
+        top: 20%;
+        border-radius: 10px;
+        
+      }
+      .boton2 {
+        width: 164px; 
+        height: 64px;
+        background-color: rgb(27, 80, 50);
+        color: white;
+        text-align: center;
+        line-height: 60px; /* centrado texto */ 
+        position: absolute;
+        left: 35%;
+        top: 40%;
+        border-radius: 10px;
+      
+    }
+    .boton2::after, .boton2::before{
+        width: 5px;
+        height: 100%;
+        background-color: white;
+        content: "";
+        position: absolute;
+        display: inline;
+        
+    }
+    .boton:hover::after{
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        display: block; 
+        /* transition: all 0.5s ease;    */
+        
+
+    }
+    .boton2:hover::after{
+        right: 0;
+        content: "";
+        width: 4px;
+        height: -64px;
+        background-color: white;    
+    }
+     .boton2:hover::before{ 
+        left: 0;
+        height: 100%;
+       transition: all 0.5s ease;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="boton">BOTON</div>
+      <div class="boton2">BOTON2</div>
+    </div>
+  </body>
+</html>
